@@ -1,8 +1,14 @@
 import React from 'react'
 
-function ProductRow() {
+function ProductRow({name, price, sold}) {
   return (
-    <div>ProductRow</div>
+    <section>
+      {
+        sold === true ? <p style={{color: "red"}}>{name}</p> : <p>{name}</p>
+      }
+      <p>{price}</p>
+      
+    </section>
   )
 }
 
